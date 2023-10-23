@@ -6,12 +6,12 @@ pygame.font.init()
 pygame.mixer.init()
 pygame.display.set_caption('First Game')
 WIDTH, HEIGHT = 900, 500
-SPACE = pygame.transform.scale(pygame.image.load(os.path.join('Simple_Game', 'Assets/space.png')), (WIDTH, HEIGHT))
+SPACE = pygame.transform.scale(pygame.image.load(os.path.join( '/home/dreytted/Y3 sem1/Graphics/Simple_Game', 'space.png')), (WIDTH, HEIGHT))
 BORDER = pygame.Rect(WIDTH/2 - 5, 0, 10, HEIGHT)
 
 #  sound
-BULLET_HIT_SOUND = pygame.mixer.Sound(os.path.join('Simple_Game', 'Assets/Grenade+1.mp3'))
-BULLET_FIRE = pygame.mixer.Sound(os.path.join('Simple_Game', 'Assets/Gun+Silencer.mp3'))
+BULLET_HIT_SOUND = pygame.mixer.Sound(os.path.join('/home/dreytted/Y3 sem1/Graphics/Simple_Game', 'Grenade+1.mp3'))
+BULLET_FIRE = pygame.mixer.Sound(os.path.join('/home/dreytted/Y3 sem1/Graphics/Simple_Game', 'Gun+Silencer.mp3'))
 
 # font
 HEALTH_FONT = pygame.font.SysFont('comicsans', 40)
@@ -24,14 +24,14 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
 # bullets
-BULLET_VEL = 7
+BULLET_VEL = 15
 MAX_BULLETS = 3
 
 # spaceship
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 SPACESHIP_WIDTH, SPACESHIP_HEIGHT = 55, 40
-YELLOW_SPACESHIP_IMAGE = pygame.image.load(os.path.join('Simple_Game', 'Assets/spaceship_yellow.png'))
-RED_SPACESHIP_IMAGE = pygame.image.load(os.path.join('Simple_Game', 'Assets/spaceship_red.png'))
+YELLOW_SPACESHIP_IMAGE = pygame.image.load(os.path.join('/home/dreytted/Y3 sem1/Graphics/Simple_Game', 'spaceship_yellow.png'))
+RED_SPACESHIP_IMAGE = pygame.image.load(os.path.join('/home/dreytted/Y3 sem1/Graphics/Simple_Game', 'spaceship_red.png'))
 YELLOW_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(YELLOW_SPACESHIP_IMAGE, (SPACESHIP_WIDTH,SPACESHIP_HEIGHT)), 90)
 RED_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(RED_SPACESHIP_IMAGE, (SPACESHIP_WIDTH,SPACESHIP_HEIGHT)), 270)
 FPS = 60
